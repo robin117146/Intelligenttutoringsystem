@@ -1,0 +1,14 @@
+
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Tutoring System</h2>
+    <p>Welcome, {{ user }}! Ask a chemistry question below:</p>
+    <form method="POST">
+        <textarea name="question" placeholder="Type your question..." required></textarea>
+        <button type="submit">Ask</button>
+    </form>
+    {% if ai_response %}
+        <h3>AI Response:</h3>
+        <p>{{ ai_response }}</p>
+    {% endif %}
+{% endblock %}

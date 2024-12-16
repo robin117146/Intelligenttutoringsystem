@@ -1,0 +1,10 @@
+
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Welcome to the Intelligent Tutoring System for Chemistry!</h2>
+    {% if user %}
+        <p>Hello, {{ user }}! Access the tutoring system <a href="{{ url_for('tutoring') }}">here</a>.</p>
+    {% else %}
+        <p>New here? <a href="{{ url_for('register') }}">Register</a> or <a href="{{ url_for('login') }}">Login</a>.</p>
+    {% endif %}
+{% endblock %}
